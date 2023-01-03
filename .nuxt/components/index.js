@@ -1,5 +1,5 @@
-export { default as CardFlip } from '../../components/CardFlip.vue'
-export { default as HootCard } from '../../components/HootCard.vue'
+export const CardFlip = () => import('../../components/CardFlip.vue' /* webpackChunkName: "components/card-flip" */).then(c => wrapFunctional(c.default || c))
+export const HootCard = () => import('../../components/HootCard.vue' /* webpackChunkName: "components/hoot-card" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
